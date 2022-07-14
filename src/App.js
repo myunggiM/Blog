@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 function App() {
   // let posts ='송파구 고기 맛집';
-  let [글제목] = useState(['남자 코트 추천','강남 우동 맛집','파이썬 독학']);  // 쓰는 이유 : 변수는 값이 바뀌면 html 이 재랜더링이 안되나 , state는 바뀌면 바로 재랜더링이 된다. 변동시 자동으로 html 에 반영되게 만들고 싶을때 쓰셈.
+  let [글제목,글제목변경] = useState(['남자 코트 추천','강남 우동 맛집','파이썬 독학']);  // 쓰는 이유 : 변수는 값이 바뀌면 html 이 재랜더링이 안되나 , state는 바뀌면 바로 재랜더링이 된다. 변동시 자동으로 html 에 반영되게 만들고 싶을때 쓰셈.
   let[좋아요,좋아요변경] = useState(0);
   //let [a,c] =[1,2]; // Destructring 문법 a=1, c=2
   let postsCss = {color:'white' ,fontSize :'30px'};
@@ -16,6 +16,11 @@ function App() {
       <div className="black-nav"> {/*JSX 에서 class는 js , className 은 html,css */}
         <div style={postsCss}>ReactBlog</div>
       </div>
+      <button onClick={() =>{
+         let copy =  글제목;
+         copy[0] = '여자코트 추천';
+         글제목변경(copy);
+      }}> 글수정</button>
       <div className="list">
         <h4>{ 글제목[0] }<span onClick={ () => { 좋아요변경(좋아요+1) }}>👍</span> { 좋아요 }</h4>  {/* onClick 안에는 함수만 가능하다. */}
         <p>7월 9일 발행</p>
