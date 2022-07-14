@@ -11,10 +11,6 @@ function App() {
   //let [a,c] =[1,2]; // Destructring 문법 a=1, c=2
   let postsCss = {color:'white' ,fontSize :'30px'};
 
-  function 함수(){
-    console.log(1);
-  }
-
   return ( // return () 안에는 병렬로 태그 2개이상 기입금지 <div></div> <div></div>
     <div className="App"> 
       <div className="black-nav"> {/*JSX 에서 class는 js , className 은 html,css */}
