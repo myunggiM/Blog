@@ -17,7 +17,7 @@ function App() {
         <div style={postsCss}>ReactBlog</div>
       </div>
       <button onClick={() =>{
-         let copy =  글제목;
+         let copy =  글제목; 
          copy[0] = '여자코트 추천';
          글제목변경(copy);
       }}> 글수정</button>
