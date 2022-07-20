@@ -39,14 +39,28 @@ function App() {
         <h4>{ 글제목[2] }</h4>
         <p>7월 9일 발행</p>
       </div>
-      <div className="modal">
-        <h4>제목</h4>
-        <p>날짜</p>
-        <p>상세내용</p>
-      </div>
+      <Modal></Modal>
+      <Modal/>
     </div>
     
   );
+}
+/* 컴포넌트가 필요한 상황 
+1. 반복적인 html 을 축약할때 
+2. 큰 페이지들 
+3. 자주변경되는 것들 
+*/
+
+function Modal(){ //컴포넌트 : 작명시 영어 대문자
+  return(
+  <>
+    <div className="modal">
+    <h4>제목</h4>
+    <p>날짜</p>
+    <p>상세내용</p>
+  </div>
+  </>
+  )
 }
 
 export default App;
