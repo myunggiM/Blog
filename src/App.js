@@ -40,7 +40,7 @@ function App() {
         <p>7월 9일 발행</p>
       </div>
       <Modal></Modal>
-      <Modal/>
+      <Modal2/>
     </div>
     
   );
@@ -50,6 +50,18 @@ function App() {
 2. 큰 페이지들 
 3. 자주변경되는 것들 
 */
+
+const Modal2 =() => {
+ return (
+  <>
+  <div className="modal">
+  <h4>제목2</h4>
+  <p>날짜2</p>
+  <p>상세내용2</p>
+</div>
+</>
+ )
+} // const 로 component 를 만들면, 잘못 쓸경우 에러로그가 뜸
 
 function Modal(){ //컴포넌트 : 작명시 영어 대문자
   return(
